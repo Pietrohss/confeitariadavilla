@@ -2,7 +2,7 @@
     <section class="portfolio-section">
         <div class="auto-container">
             <div class="sec-title text-center">
-                <div class="divider"><img src="images/icons/divider_1.png" alt=""></div>
+                <div class="divider"><img src={{ asset("davilla/images/icons/divider_1.png") }} alt=""></div>
                 <h2>Our Creations</h2>
             </div>
 
@@ -137,4 +137,4 @@
             </div>
         </div>
     </section>
-<!--End Projects Sections -->
+    <!--End Projects Sections -->

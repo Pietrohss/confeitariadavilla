@@ -2,16 +2,16 @@
 <title>Bellaria - a Delicious Cakes and Bakery HTML Template | Home Cake</title>
 
 <!-- Stylesheets -->
-<link href="{{ assert('davilla/css/bootstrap.css') }}" rel="stylesheet">
-<link href="{{ assert('plugins/revolution/css/settings.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
-<link href="{{ assert('plugins/revolution/css/layers.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
-<link href="{{ assert('plugins/revolution/css/navigation.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{{ asset('davilla/css/bootstrap.css') }}" rel="stylesheet">
+<link href="{{ asset('plugins/revolution/css/settings.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{{ asset('plugins/revolution/css/layers.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{{ asset('plugins/revolution/css/navigation.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
 
-<link href="{{ assert('css/style.css') }}" rel="stylesheet">
-<link href="{{ assert('css/responsive.css') }}" rel="stylesheet">
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
-<link rel="shortcut icon" href="{{ assert('images/favicon.png') }}" type="image/x-icon">
-<link rel="icon" href="{{ assert('images/favicon.png') }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
+<link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

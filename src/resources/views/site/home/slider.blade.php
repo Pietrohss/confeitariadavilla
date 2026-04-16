@@ -43,7 +43,7 @@
                         data-paddingright="[0,0,0,0]"
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
-                        style="z-index: 6;"><img src="images/main-slider/slider_bg_1.png" alt="" data-ww="654px" data-hh="654px" width="654" height="654" data-no-retina> </div>
+                        style="z-index: 6;"><img src={{ asset("davilla/images/main-slider/slider_bg_1.png" ) }}alt="" data-ww="654px" data-hh="654px" width="654" height="654" data-no-retina> </div>
 
                     <!-- LAYER NR. 3 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -95,7 +95,7 @@
                         data-paddingright="[0,0,0,0]"
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
-                        style="z-index: 9;"><img src="images/main-slider/slider_bg_4.png" alt="" data-ww="125px" data-hh="60px" width="125" height="60" data-no-retina> </div>
+                        style="z-index: 9;"><img src={{ asset("davilla/images/main-slider/slider_bg_4.png") }} alt="" data-ww="125px" data-hh="60px" width="125" height="60" data-no-retina> </div>
 
                     <!-- LAYER NR. 6 -->
                     <div class="tp-caption tp-resizeme hide-sm" 
@@ -112,7 +112,7 @@
                         data-paddingright="[0,0,0,0]"
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
-                        style="z-index: 10;"><img src="images/main-slider/slider_bg_3.png" alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
+                        style="z-index: 10;"><img src={{ asset("davilla/images/main-slider/slider_bg_3.png") }} alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
 
                         <!-- LAYER NR. 7 -->
                         <div class="tp-caption tp-resizeme hide-sm" 
@@ -129,7 +129,7 @@
                             data-paddingright="[0,0,0,0]"
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
-                            style="z-index: 11;"><img src="images/main-slider/slider_bg_2.png" alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina></div>
+                            style="z-index: 11;"><img src={{ asset("davilla/images/main-slider/slider_bg_2.png") }} alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina></div>
                     </li>
 
                     <!-- SLIDE  -->
@@ -171,7 +171,7 @@
                             data-paddingright="[0,0,0,0]"
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
-                            style="z-index: 6;"><img src="images/main-slider/slider_bg_1.png" alt="" data-ww="654px" data-hh="654px" width="654" height="654" data-no-retina> </div>
+                            style="z-index: 6;"><img src={{ asset("davilla/images/main-slider/slider_bg_1.png") }} alt="" data-ww="654px" data-hh="654px" width="654" height="654" data-no-retina> </div>
 
                         <!-- LAYER NR. 10 -->
                         <div class="tp-caption tp-resizeme" 
@@ -223,7 +223,7 @@
                             data-paddingright="[0,0,0,0]"
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
-                            style="z-index: 9;"><img src="images/main-slider/slider_bg_4.png" alt="" data-ww="125px" data-hh="60px" width="125" height="60" data-no-retina> </div>
+                            style="z-index: 9;"><img src={{ asset("davilla/images/main-slider/slider_bg_4.png") }} alt="" data-ww="125px" data-hh="60px" width="125" height="60" data-no-retina> </div>
 
                         <!-- LAYER NR. 13 -->
                         <div class="tp-caption tp-resizeme hide-sm" 
@@ -240,7 +240,7 @@
                             data-paddingright="[0,0,0,0]"
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
-                            style="z-index: 10;"><img src="images/main-slider/slider_bg_3.png" alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
+                            style="z-index: 10;"><img src={{ asset("davilla/images/main-slider/slider_bg_3.png") }} alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
 
                         <!-- LAYER NR. 14 -->
                         <div class="tp-caption tp-resizeme hide-sm" 
@@ -257,7 +257,7 @@
                             data-paddingright="[0,0,0,0]"
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
-                            style="z-index: 11;"><img src="images/main-slider/slider_bg_2.png" alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
+                            style="z-index: 11;"><img src={{ asset("davilla/images/main-slider/slider_bg_2.png") }} alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
                     </li>
                     <!-- SLIDE  -->
                     <li data-index="rs-6" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="850"  data-thumb=""  data-delay="5999"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -298,7 +298,7 @@
                             data-paddingright="[0,0,0,0]"
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
-                            style="z-index: 6;"><img src="images/main-slider/slider_bg_1.png" alt="" data-ww="654px" data-hh="654px" width="654" height="654" data-no-retina> </div>
+                            style="z-index: 6;"><img src={{ asset("davilla/images/main-slider/slider_bg_1.png") }} alt="" data-ww="654px" data-hh="654px" width="654" height="654" data-no-retina> </div>
 
                         <!-- LAYER NR. 17 -->
                         <div class="tp-caption   tp-resizeme" 
@@ -350,7 +350,7 @@
                             data-paddingright="[0,0,0,0]"
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
-                            style="z-index: 9;"><img src="images/main-slider/slider_bg_4.png" alt="" data-ww="125px" data-hh="60px" width="125" height="60" data-no-retina> </div>
+                            style="z-index: 9;"><img src={{ asset("davilla/images/main-slider/slider_bg_4.png") }} alt="" data-ww="125px" data-hh="60px" width="125" height="60" data-no-retina> </div>
 
                         <!-- LAYER NR. 20 -->
                         <div class="tp-caption tp-resizeme hide-sm" 
@@ -367,7 +367,7 @@
                             data-paddingright="[0,0,0,0]"
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
-                            style="z-index: 10;"><img src="images/main-slider/slider_bg_3.png" alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
+                            style="z-index: 10;"><img src={{ asset("davilla/images/main-slider/slider_bg_3.png") }} alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
 
                         <!-- LAYER NR. 21 -->
                         <div class="tp-caption tp-resizeme hide-sm" 
@@ -384,10 +384,10 @@
                             data-paddingright="[0,0,0,0]"
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
-                            style="z-index: 11;"><img src="images/main-slider/slider_bg_2.png" alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
+                            style="z-index: 11;"><img src={{ asset("davilla/images/main-slider/slider_bg_2.png") }} alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
-<!--End Main Slider-->
+    <!--End Main Slider-->
