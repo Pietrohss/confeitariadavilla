@@ -3,15 +3,18 @@
 
 <!-- Stylesheets -->
 <link href="{{ asset('davilla/css/bootstrap.css') }}" rel="stylesheet">
-<link href="{{ asset('plugins/revolution/css/settings.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
-<link href="{{ asset('plugins/revolution/css/layers.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
-<link href="{{ asset('plugins/revolution/css/navigation.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{{ asset('davilla/plugins/revolution/css/settings.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{{ asset('davilla/plugins/revolution/css/layers.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{{ asset('davilla/plugins/revolution/css/navigation.css') }}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
 
-<link href="{{ asset('css/style.css') }}" rel="stylesheet">
-<link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+<link href="{{ asset('davilla/css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('davilla/css/responsive.css') }}" rel="stylesheet">
 
-<link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
-<link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
+
+<link href="{{ asset('xyzcode/css/estilo.css') }}" rel="stylesheet">
+
+<link rel="shortcut icon" href="{{ asset('davilla/images/favicon.png') }}" type="image/x-icon">
+<link rel="icon" href="{{ asset('davilla/images/favicon.png') }}" type="image/x-icon">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

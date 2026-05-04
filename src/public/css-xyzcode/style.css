@@ -1,0 +1,28 @@
+.logo{
+    width: 200px;
+}
+
+.logo img {
+    margin-top: 20px;
+    width: 100%;
+    margin-left: -14px;
+}
+
+.sticky-header .logo img {
+    margin-top: -10px;
+    width: 30%;
+    margin-left: 37px;
+}
+
+.footer-logo img{
+    max-width: 70%;
+}
+
+.service-block .image img {
+    height: stretch;
+}
+
+
+.theme-btn.large {
+    width: 350px;
+}
