@@ -1,4 +1,4 @@
-    <!--Page Title-->
+ <!--Page Title-->
     @php
     $pageTitle = asset('davilla/images/34.jpg');
     @endphp
