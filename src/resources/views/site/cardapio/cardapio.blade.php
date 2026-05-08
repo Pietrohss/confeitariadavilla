@@ -20,7 +20,6 @@
 
 @endpush
 
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const filtroInicial = "{{ $categoriaAtiva }}";
