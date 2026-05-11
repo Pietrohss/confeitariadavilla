@@ -25,7 +25,6 @@ class CardapioController extends Controller
 
         //dd($listaProduto);
 
-        return view('site.cardapio.cardapio', compact('filtroCategoria', 'listaProduto'));
         $categoriaAtiva = 'all';
 
         return view('site.cardapio.cardapio', compact(

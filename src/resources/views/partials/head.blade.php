@@ -11,7 +11,7 @@
 <link href="{{ asset('davilla/css/responsive.css') }}" rel="stylesheet">
 
 
-<link href="{{ asset('xyzcode/css/estilo.css') }}" rel="stylesheet">
+<link href="{{ asset('xyzcode/css/style.css') }}" rel="stylesheet">
 
 <link rel="shortcut icon" href="{{ asset('davilla/images/favicon.png') }}" type="image/x-icon">
 <link rel="icon" href="{{ asset('davilla/images/favicon.png') }}" type="image/x-icon">
