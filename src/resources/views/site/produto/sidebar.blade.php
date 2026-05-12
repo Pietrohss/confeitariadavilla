@@ -1,4 +1,4 @@
-    <!--Sidebar Page Container-->
+     <!--Sidebar Page Container-->
     <div class="sidebar-page-container">
         <div class="auto-container">
             <div class="row clearfix">
@@ -30,7 +30,6 @@
                                                 <span class="fa fa-star"></span>
                                                 <span class="fa fa-star"></span>
                                             </div>
-                                            <a class="reviews" href="#">(2 Customer Reviews)</a>
                                             <a class="reviews" href="#">(Avaliações de clientes)</a>
                                             <div class="item-price">{{ number_format($produto->valor_produto, 2,',','.') }}</div>
                                             <div class="text">{{ $produto->descricao_produto }}</div>
@@ -41,6 +40,7 @@
                                             <button type="button" class="theme-btn add-to-cart"><span class="btn-title">Add ao reserva</span></button>
                                             <ul class="product-meta">
                                                 <li class="posted_in">Categoria: <a href="#">{{ $produto->CategoriaProduto->nome_categoria }}</a></li>
+                                                <li class="posted_in">Categoria: <a href="{{ $produto->CategoriaProduto->id_categoria }}">{{ $produto->CategoriaProduto->nome_categoria }}</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -64,7 +64,6 @@
 
                                         <!--Tab-->
                                         <div class="tab" id="prod-details">
-                                            <h2 class="title">Descripton</h2>
                                             <h2 class="title">Descrição</h2>
                                             <div class="content">
                                                 <p>{{ $produto->descricao_produto }}</p>
@@ -245,6 +244,7 @@
                                 <ul class="tag-list clearfix">
                                     @foreach($listaCategoria as $linha)
                                     <li><a href="#">{{ $linha->nome_categoria }}</a></li>
+                                    <li><a href="{{ $linha->id_categoria }}">{{ $linha->nome_categoria }}</a></li>
                                     @endforeach
 
                                 </ul>

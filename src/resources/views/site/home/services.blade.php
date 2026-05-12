@@ -1,6 +1,7 @@
     <!-- Services Section -->
     @php
         $services = asset('davilla/images/services/services-1.png');
+    $services = asset('davilla/images/services/services-1.png');
     @endphp
     <section class="services-section" style="background-image: url('{{ $services }}');">
         <div class="auto-container">
@@ -12,6 +13,7 @@
             <!-- Services Carousel -->
             <div class="services-carousel owl-carousel owl-theme">
                 
+                @foreach ($filtroCategoria as $linha)
                 <!-- Service Block -->
                 <div class="service-block">
                     <div class="inner-box">
@@ -21,11 +23,15 @@
                                 </svg></div>
                             <!-- cake img -->
                             <figure class="image"><img src="{{ asset('davilla/images/services/services-2.svg') }}" alt=""></figure>
+                            <figure class="image"><img src="{{ asset("davilla/images/services/services-$linha->id_categoria.svg") }}" alt="{{ $linha->nome_categoria }}"></figure>
                         </div>
                         <h3>Bolos Fit</h3>
                         <p>Encomendas feitas com carinho para aniversários, celebrações e momentos que merecem um toque especial.</p>
+                        <h3>{{ $linha->nome_categoria }}</h3>
+                        <p>{{ $linha->descricao_categoria }}</p>
                     </div>
                 </div>
+                @endforeach
 
                 <!-- Service Block -->
                 <div class="service-block">

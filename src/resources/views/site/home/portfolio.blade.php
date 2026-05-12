@@ -9,11 +9,14 @@
             </div>
 
             <div class="row">
+                 
+                @foreach ($listaProduto->shuffle()->take(8) as $linha)
                 <!-- Portfolio Block -->
                 <div class="portfolio-block col-lg-3 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image"><img src="{{ asset('davilla/images/portfolio/portfolio-1.png') }}" alt=""></figure>
+                            <figure class="image"><img src="{{ asset("davilla/images/produto/$linha->slug_produto.png") }}" alt="{{ $linha->nome_produto }}"></figure>
                         </div>
                         <div class="portfolio-hover">
                             <div class="hover-effect">
@@ -23,9 +26,12 @@
                             </div>
                             <a href="{{ asset('davilla/images/portfolio/portfolio-1.png') }}" class="lightbox-image link" data-fancybox="portfolio"></a>
                             <h3><a href="portfolio-single.html">Nulla diam <br>tellus</a></h3>
+                            <a href="{{ asset("davilla/images/produto/$linha->slug_produto.png") }}" class="lightbox-image link" data-fancybox="portfolio"></a>
+                            <h3><a href="{{ route('cardapio.produto', $linha->slug_produto) }}">{{ $linha->nome_produto }}</a></h3>
                         </div>
                     </div>
                 </div>
+                @endforeach
 
                 <!-- Portfolio Block -->
                 <div class="portfolio-block col-lg-3 col-md-6 col-sm-12">
@@ -155,4 +161,3 @@
             </div>
         </div>
     </section>
-    <!--End Projects Sections -->
