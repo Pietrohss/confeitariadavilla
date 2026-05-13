@@ -2,6 +2,7 @@
     <section class="main-slider">
         <div class="slider_wave"></div>
         <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
+        <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
             <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
                 <ul>
                     <li data-index="rs-4" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="850"  data-thumb="#"  data-delay="5999"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -132,6 +133,7 @@
                             style="z-index: 11;"><img src="{{ asset('davilla/images/main-slider/slider_bg_2.png') }}" alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina></div>
                     </li>
 
+                    @foreach ($banner as $linha)
                     <!-- SLIDE  -->
                     <li data-index="rs-5" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="850"  data-thumb=""  data-delay="5999"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
@@ -190,6 +192,7 @@
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
                             style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 24px; font-weight: 400; color: #4b4342;font-family:ABeeZee;">Sabores leves, bonitos e irresistíveis<br> para o seu dia a dia ou comemoração</div>
+                    <li data-index="rs-{{ $linha->id_banner }}" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="850" data-thumb="#" data-delay="5999" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
                         <!-- LAYER NR. 11 -->
                         <div class="tp-caption   tp-resizeme" 
@@ -264,6 +267,7 @@
                     <li data-index="rs-6" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="850"  data-thumb=""  data-delay="5999"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
                         <img src="{{ asset('davilla/images/main-slider/slide-1.png') }}"  alt="" title="Home Cakes"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <img src="{{ asset("davilla/images/main-slider/slide-$linha->id_banner.png") }}" alt="" title="Home Cakes" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
                         <!-- LAYER NR. 15 -->
@@ -271,11 +275,19 @@
                             id="slide-6-layer-44" 
                             data-x="center" data-hoffset="" 
                             data-y="center" data-voffset="" 
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"
+                            id="slide-4-layer-44"
+                            data-x="center" data-hoffset="1"
+                            data-y="center" data-voffset="-3"
                             data-width="['full','full','full','full']"
                             data-height="['full','full','full','full']"
                             data-type="shape" 
                             data-basealign="slide" 
                             data-responsive_offset="on" 
+                            data-type="shape"
+                            data-basealign="slide"
+                            data-responsive_offset="on"
                             data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                             data-textAlign="['inherit','inherit','inherit','inherit']"
                             data-paddingtop="[0,0,0,0]"
@@ -283,16 +295,24 @@
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
                             style="z-index: 5;background-color:rgba(80,81,92,0.15);"> </div>
+                            style="z-index: 5;background-color:rgba(80,81,92,0.15);"></div>
 
                         <!-- LAYER NR. 16 -->
                         <div class="tp-caption   tp-resizeme" 
                             id="slide-6-layer-40" 
                             data-x="center" data-hoffset="" 
                             data-y="center" data-voffset="-1" 
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption   tp-resizeme"
+                            id="slide-4-layer-40"
+                            data-x="center" data-hoffset=""
+                            data-y="center" data-voffset=""
                             data-width="['none','none','none','none']"
                             data-height="['none','none','none','none']"
                             data-type="image" 
                             data-responsive_offset="on" 
+                            data-type="image"
+                            data-responsive_offset="on"
                             data-frames='[{"delay":500,"speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                             data-textAlign="['inherit','inherit','inherit','inherit']"
                             data-paddingtop="[0,0,0,0]"
@@ -325,9 +345,18 @@
                             data-x="center" data-hoffset="" 
                             data-y="center" data-voffset="-18" 
                             data-width="['394']"
+                        
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption   tp-resizeme"
+                            id="slide-4-layer-31"
+                            data-x="center" data-hoffset=""
+                            data-y="center" data-voffset="-18"
+                            data-width="['399']"
                             data-height="['auto']"
                             data-type="text" 
                             data-responsive_offset="on" 
+                            data-type="text"
+                            data-responsive_offset="on"
                             data-frames='[{"delay":500,"speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"nothing"}]'
                             data-textAlign="['center','center','center','center']"
                             data-paddingtop="[0,0,0,0]"
@@ -335,16 +364,24 @@
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
                             style="z-index: 8; min-width: 394px; max-width: 394px; white-space: normal; font-size: 72px; line-height: 72px; font-weight: 400; color: #4b4342;font-family:Leckerli One;">The Gusta <br>Confeitaria</div>
+                            style="z-index: 8; min-width: 399px; max-width: 399px; white-space: normal; font-size: 52px; line-height: 52px; font-weight: 400; color: #4b4342;font-family:Leckerli One;">{{ $linha->titulo_banner }}</div>
 
                         <!-- LAYER NR. 19 -->
                         <div class="tp-caption   tp-resizeme" 
                             id="slide-6-layer-41" 
                             data-x="center" data-hoffset="" 
                             data-y="center" data-voffset="-150" 
+                        <!-- LAYER NR. 5 -->
+                        <div class="tp-caption   tp-resizeme"
+                            id="slide-4-layer-41"
+                            data-x="center" data-hoffset=""
+                            data-y="center" data-voffset="-150"
                             data-width="['none','none','none','none']"
                             data-height="['none','none','none','none']"
                             data-type="image" 
                             data-responsive_offset="on" 
+                            data-type="image"
+                            data-responsive_offset="on"
                             data-frames='[{"delay":500,"speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                             data-textAlign="['inherit','inherit','inherit','inherit']"
                             data-paddingtop="[0,0,0,0]"
@@ -358,10 +395,17 @@
                             id="slide-6-layer-42" 
                             data-x="398" 
                             data-y="center" data-voffset="" 
+                        <!-- LAYER NR. 6 -->
+                        <div class="tp-caption tp-resizeme hide-sm"
+                            id="slide-4-layer-42"
+                            data-x="398"
+                            data-y="center" data-voffset=""
                             data-width="['none','none','none','none']"
                             data-height="['none','none','none','none']"
                             data-type="image" 
                             data-responsive_offset="on" 
+                            data-type="image"
+                            data-responsive_offset="on"
                             data-frames='[{"delay":500,"speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                             data-textAlign="['inherit','inherit','inherit','inherit']"
                             data-paddingtop="[0,0,0,0]"
@@ -375,10 +419,17 @@
                             id="slide-6-layer-43" 
                             data-x="1325" 
                             data-y="center" data-voffset="" 
+                        <!-- LAYER NR. 7 -->
+                        <div class="tp-caption tp-resizeme hide-sm"
+                            id="slide-4-layer-43"
+                            data-x="1325"
+                            data-y="center" data-voffset=""
                             data-width="['none','none','none','none']"
                             data-height="['none','none','none','none']"
                             data-type="image" 
                             data-responsive_offset="on" 
+                            data-type="image"
+                            data-responsive_offset="on"
                             data-frames='[{"delay":500,"speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                             data-textAlign="['inherit','inherit','inherit','inherit']"
                             data-paddingtop="[0,0,0,0]"
@@ -386,9 +437,10 @@
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
                             style="z-index: 11;"><img src="{{ asset('davilla/images/main-slider/slider_bg_2.png') }}" alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina> </div>
+                            style="z-index: 11;"><img src="{{ asset('davilla/images/main-slider/slider_bg_2.png') }}" alt="" data-ww="196px" data-hh="107px" width="196" height="107" data-no-retina></div>
                     </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
     </section>
-    <!--End Main Slider-->

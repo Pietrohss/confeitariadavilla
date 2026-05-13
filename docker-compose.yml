@@ -28,6 +28,8 @@ services:
   mysql:
     image: mysql:8.0
     container_name: davilla_mysql
+    ports:
+      - 8086:8088
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: davilla
