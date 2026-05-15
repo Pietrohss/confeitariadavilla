@@ -8,18 +8,11 @@ use App\Models\Categoria;
 
 class CategoriaController extends Controller
 {
-
     public function index(){
 
-        $categoria = Categoria::orderBy('ordem_categoria')
-        ->get();
-
+        $categorias = Categoria::orderBy('ordem_categoria')->get();
+        //dd($categorias);
         return view('admin.categoria.index', compact('categorias'));
 
-
     }
-
-
-
-
 }
