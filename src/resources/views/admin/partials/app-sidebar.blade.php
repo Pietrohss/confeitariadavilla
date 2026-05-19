@@ -1,4 +1,4 @@
-<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+<aside class="app-si<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
 
     {{-- Logo / Marca --}}
     <div class="sidebar-brand">
@@ -62,6 +62,7 @@
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
+                            <a href="{{ route('admin.produto.index') }}" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Produtos</p>
                             </a>
@@ -199,5 +200,3 @@
         </nav>
 
     </div>
-
-</aside>
