@@ -63,11 +63,18 @@ class CardapioController extends Controller
             ->orderBy('ordem_categoria')
             ->get();
 
-            $listaProduto = Produto::with('CategoriaProduto')
-                ->where('status_produto', 'ATIVO')
-                ->orderBy('ordem_produto')
-                ->get();
-                
-            $categoriaAtiva
+        $listaProduto = Produto::with('CategoriaProduto')
+            ->where('status_produto', 'ATIVO')
+            ->orderBy('ordem_produto')
+            ->get();
+
+        $categoriaAtiva = '.categoria-' . $id;
+        //.categoria-3
+
+        return view('site.cardapio.cardapio', compact(
+            'filtroCategoria',
+            'listaProduto',
+            'categoriaAtiva'
+        ));
     }
 }
