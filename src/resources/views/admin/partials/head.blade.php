@@ -26,6 +26,7 @@
 
 <link href="path/to/lightbox.css" rel="stylesheet" />
 <link rel="preload" href="{{ asset('dash/css/adminlte.css') }}" as="style" />
+<link href="{{ asset('xyzcode/css/estilo-dash.css') }}" rel="stylesheet">
 <!--end::Accessibility Features-->
 
 <!--begin::Fonts-->

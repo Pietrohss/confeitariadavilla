@@ -17,6 +17,21 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Gerenciamento de Produtos</h3>
+                    @if (session('success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    @if ($errors->any())
+                    <div class="alert alert-dangeer" role="alert">
+                        <strong>Atenção!</strong> verifique os campos do formulário.
+                    </div>
+                    @endif
+
+
+
+                    <!-- DESATIVAR-->
                     <div class="card-tools">
                         <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalNovoProduto">
                             <i class="bi bi-plus-circle"></i>
@@ -61,6 +76,13 @@
                                 <td>
                                     <a href="{{ asset('davilla/images/'. $linha->foto_produto) }}"data-lightbox="galeria">
                                         <img src="{{ asset('davilla/images/'. $linha->foto_produto) }}" class="img-thumbnail" alt=" {{ $linha->nome_produto }}" data-lightbox="roadtrip">
+                                    <a href="{{ asset('davilla/images/' . $linha->foto_produto) }}"
+                                        data-lightbox="galeria"
+                                        data-title="{{ $linha->nome_produto }}">
+
+                                        <img src="{{ asset('davilla/images/' . $linha->foto_produto) }}"
+                                            class="img-thumbnail"
+                                            alt="{{ $linha->nome_produto }}">
                                     </a>
                                 </td>
                                 <td>
@@ -87,6 +109,7 @@
                                 </td>
                                 <td>
 
+                                    <!--Desativar-->
                                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditarproduto{{ $linha->id_produto }}">
                                         <i class="bi bi-pencil"></i>
                                     </button>
@@ -116,5 +139,3 @@
 
 
 @include('admin.produto.modal.criar')
-
-@endsection
