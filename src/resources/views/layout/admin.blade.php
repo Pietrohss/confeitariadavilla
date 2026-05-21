@@ -4,7 +4,7 @@
 <head>
     @include('admin.partials.head')
 
-    @vite(['resources/js/app.js'])
+     @vite(['resources/js/app.js'])
 </head>
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
@@ -15,6 +15,7 @@
         @include('admin.partials.app-sidebar')
 
         <main class="app-main">
+            @include('admin.partials.content-header')
             @yield('content')
         </main>
 
@@ -156,5 +157,3 @@
     @stack('scripts')
 
 </body>
-
-</html>

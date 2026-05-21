@@ -14,8 +14,6 @@ use App\Http\Controllers\Site\SobreController;
 
 use App\Http\Controllers\Admin\DashController;
 use App\Http\Controllers\Admin\CategoriaController;
-
-
 use App\Http\Controllers\Admin\ProdutoController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,13 +42,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::get('/', [DashController::class, 'index'])->name('dash');
 
-    // Categorias
     Route::get('/categorias', [CategoriaController::class, 'index'])->name('categoria.index');
-    Route::post('/categorias', [CategoriaController::class, 'store'])->name('categoria.index');
-    Route::patch('/categorias/{id}', [CategoriaController::class, 'desativar'])->name('categoria.desativar');
-    Route::post('/categorias/{id}', [CategoriaController::class, 'ativar'])->name('categoria.ativar');
+    Route::post('/categorias', [CategoriaController::class, 'store'])->name('categoria.store');
+    
+    Route::patch('/categorias/{id}/desativar', [CategoriaController::class, 'desativar'])->name('categoria.desativar');
+
+    Route::patch('/categorias/{id}/ativar', [CategoriaController::class, 'ativar'])->name('categoria.ativar');
 
 
-   
+
+
+
     Route::get('/produto', [ProdutoController::class, 'index'])->name('produto.index');
 });
