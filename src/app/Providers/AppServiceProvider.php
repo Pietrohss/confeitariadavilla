@@ -28,6 +28,9 @@ class AppServiceProvider extends ServiceProvider
 
             // Buscar todas as categorias ordenar por nome
             $listaCategoria = Categoria::orderBy('nome_categoria')->get();
+            $listaCategoria = Categoria::where('status_categoria', 'ATIVO')
+                ->orderBy('nome_categoria')
+                ->get();
 
             //dd($listaCategoria);
             //var_dump($listaCategoria);
@@ -35,7 +38,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('lista', $listaCategoria);
 
         });
-       
+
 
     }
 }
