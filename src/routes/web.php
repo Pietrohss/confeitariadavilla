@@ -45,9 +45,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/categorias', [CategoriaController::class, 'index'])->name('categoria.index');
     Route::post('/categorias', [CategoriaController::class, 'store'])->name('categoria.store');
     
+    //Desativar
     Route::patch('/categorias/{id}/desativar', [CategoriaController::class, 'desativar'])->name('categoria.desativar');
-
+    //Ativar
     Route::patch('/categorias/{id}/ativar', [CategoriaController::class, 'ativar'])->name('categoria.ativar');
+
+    //Editar
+    Route::put('/categorias/{id}', [CategoriaController::class, 'update'])->name('categoria.update');
 
 
 

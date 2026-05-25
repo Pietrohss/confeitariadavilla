@@ -71,8 +71,10 @@
                                         class="btn btn-warning"
                                         data-bs-toggle="modal"
                                         data-bs-target="#modalEditarCategoria{{ $linha->id_categoria }}">
-                                        <i class="bi bi-pencil"></i>
+                                        <i class="bi bi-arrow-counterclockwise"></i>
                                     </button>
+
+                                    
 
                                     <button type="button" class="btn btn-danger">
                                         <i class="bi bi-trash3"></i>
@@ -100,6 +102,9 @@
 
                                 </td>
                             </tr>
+
+                            @include('admin.categoria.modal.criar'), ['categoria'] => $categoria
+                            @include('admin.categoria.modal.editar')
                             @empty
                             <tr>
                                 <td>Nenhuma categoria cadastrada</td>
