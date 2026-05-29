@@ -14,13 +14,13 @@ class ProdutoController extends Controller
     public function index()
     {
         $produtos = Produto::orderBy('ordem_produto')->get();
-        
+        $produtos = Produto::orderBy('nome_produto')->get();
+
         $categorias = Categoria::where('status_categoria', 'ATIVO')
             ->orderBy('nome_categoria')
             ->get();
 
         //dd($produtos);
-        return view('admin.produto.index', compact('produtos'));
         return view('admin.produto.index', compact('produtos', 'categorias'));
     }
 

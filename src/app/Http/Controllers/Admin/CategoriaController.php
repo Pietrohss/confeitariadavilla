@@ -9,19 +9,16 @@ use Illuminate\Support\Facades\Redirect;
 
 class CategoriaController extends Controller
 {
-
     public function index()
     {
 
         $categorias = Categoria::orderBy('ordem_categoria')
-        // ->where('status_categoria', 'ATIVO')
-        ->get();
-
+            // ->where('status_categoria', 'ATIVO')  
+            ->get();
 
         //dd($categorias);
         return view('admin.categoria.index', compact('categorias'));
     }
-
 
     // METODO CRIAR
     public function store(Request $request)
@@ -33,7 +30,6 @@ class CategoriaController extends Controller
             'nome_categoria'        => 'required|string|max:30',
             'descricao_categoria'   => 'required|string',
             'ordem_categoria'       => 'required|integer',
-            'status_categoria'      => 'required|in:ATIVO,INATIVO',            
             'status_categoria'      => 'required|in:ATIVO,INATIVO',
         ]);
 
@@ -45,39 +41,37 @@ class CategoriaController extends Controller
         ]);
 
         return redirect()
-        ->route('admin.categoria.index')
-        ->with('success', 'Categoria cadastrada com sucesso!');
-
+            ->route('admin.categoria.index')
+            ->with('success', 'Categoria cadastrada com sucesso!');
     }
-
 
     // METODO DESATIVAR
     public function desativar($id)
     {
         $categoria = Categoria::findOrFail($id);
         // $categoria->status_categoria = 'INATIVO';
+        $categoria->status_categoria = 'INATIVO';
         $categoria->update([
             'status_categoria' => 'INATIVO',
         ]);
 
         return redirect()
-        ->route('admin.categoria.index')
-        ->with('success', 'Categoria desativada com sucesso');
-
-
+            ->route('admin.categoria.index')
+            ->with('success', 'Categoria desativada com sucesso');
     }
-
 
     // METODO ATIVAR
     public function ativar($id)
     {
         $categoria = Categoria::findOrFail($id);
         $categoria->status_categoria = 'ATIVO';
+        $categoria->update([
+            'status_categoria' => 'ATIVO',
+        ]);
 
         return redirect()
-        ->route('admin.categoria.index')
-        ->with('success', 'Categoria ativada com sucesso');
-
+            ->route('admin.categoria.index')
+            ->with('success', 'Categoria ativada com sucesso');
     }
 
     // METODO ATUALIZAR

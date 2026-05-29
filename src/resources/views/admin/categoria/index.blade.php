@@ -67,21 +67,14 @@
                                         class="btn btn-warning"
                                         data-bs-toggle="modal"
                                         data-bs-target="#modalEditarCategoria{{ $linha->id_categoria }}">
-                                        <i class="bi bi-pencil"></i>
                                         <i class="bi bi-arrow-counterclockwise"></i>
                                     </button>
 
 
 
                                     <!-- DESATIVAR -->
+                                    <!-- DESATIVAR ou ATIVAR -->
                                     @if($linha->status_categoria === 'ATIVO')
-                                        <form action="{{ route('admin.categoria.desativar', $linha->id_categoria) }}" method="post">
-                                            @csrf
-                                            @method('PATCH')
-                                            <button type="submit" class="btn btn-danger">
-                                                <i class="bi bi-trash3"></i>
-                                            </button>
-                                        </form>
                                     <form action="{{ route('admin.categoria.desativar', $linha->id_categoria) }}" method="post">
                                         @csrf
                                         @method('PATCH')
@@ -90,17 +83,11 @@
                                         </button>
                                     </form>
                                     @else
-                                        <form action="{{ route('admin.categoria.ativar', $linha->id_categoria) }}" method="post">
-                                            @csrf
-                                            @method('PATCH')
-                                            <button type="submit" class="btn btn-danger">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                        </form>
                                     <form action="{{ route('admin.categoria.ativar', $linha->id_categoria) }}" method="post">
                                         @csrf
                                         @method('PATCH')
                                         <button type="submit" class="btn btn-danger">
+                                        <button type="submit" class="btn btn-success">
                                             <i class="bi bi-pencil"></i>
                                         </button>
                                     </form>
@@ -132,5 +119,3 @@
 
 @include('admin.categoria.modal.criar')
 
-
-@endsection
