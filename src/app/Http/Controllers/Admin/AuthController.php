@@ -31,7 +31,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
             return redirect()-route('admin.dash');
-        }
+        };
 
         return back()->withInput()->with('erro', 'E-mail ou senha invalida');
 

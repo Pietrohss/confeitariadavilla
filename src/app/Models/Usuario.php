@@ -1,9 +1,14 @@
 <?php
 
+namespace App\Models;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Override;
 
-class Usuario extends Model{
+class Usuario extends Authenticatable{
     protected $table = 'tbl_usuarios';
+
+    protected $primaryKey = 'id_usuario';
 
     public $timestamps =true;
 
@@ -20,9 +25,10 @@ class Usuario extends Model{
         'status_usuario',
     ];
 
-    protected $hidden = ['senha_usuario']
+    protected $hidden = ['senha_usuario'];
 
-    public function getAuthPassword(){
-        return $this->senha_usuario;
+    public function getAuthPassword()
+    {
+        return parent::getAuthPassword();
     }
 }
