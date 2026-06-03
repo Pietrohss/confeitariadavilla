@@ -1,121 +1,70 @@
-@extends('layout.admin')
+<!doctype html>
 
-@section('title', 'Categoria | Confeitaria Dashboard')
+<html lang="pt-BR">
 
-@section('pg-titulo', 'Categoria')
-
-@section('link-topo', 'Categoria')
-
-@section('content')
-
-<div class="app-content">
-    <!--begin::Container-->
-    <div class="container-fluid">
-        <!--begin::Row-->
-        <div class="row">
-
-            @if (session('success'))
-            <div class="alert alert-success" role="alert">
-                {{ session('success') }}
-            </div>
-            @endif
-
-            @if ($errors->any())
-            <div class="alert alert-danger" role="alert">
-                <strong>Atenção!</strong> verifique os campos do formulário.
-            </div>
-            @endif
-
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Gerenciamento de Categorias</h3>
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalNovaCategoria">
-                            <i class="bi bi-plus-circle"></i>
-                            Nova Categoria
-                        </button>
-                    </div>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body p-0">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th style="width: 40px">Ordem</th>
-                                <th>Nome</th>
-                                <th>Descrição</th>
-                                <th>Status</th>
-                                <th style="width: 200px">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @forelse($categorias as $linha)
-                            <tr class="align-middle">
-                                <td>{{ $linha->ordem_categoria }}</td>
-                                <td>{{ $linha->nome_categoria }}</td>
-                                <td>{{ $linha->descricao_categoria }}</td>
-                                <td>
-                                    @if($linha->status_categoria === 'ATIVO')
-                                    <span class="badge text-bg-success">Ativo</span>
-                                    @else
-                                    <span class="badge text-bg-danger">Inativo</span>
-                                    @endif
-                                </td>
-                                <td>
-                                    <!-- EDITAR -->
-                                    <button type="button"
-                                        class="btn btn-warning"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#modalEditarCategoria{{ $linha->id_categoria }}">
-                                        <i class="bi bi-arrow-counterclockwise"></i>
-                                    </button>
+<head>
+    @include('admin.partials.head')
+</head>
 
 
+<body class="login-page bg-body-secondary">
+    <div class="login-box">
 
-                                    <!-- DESATIVAR ou ATIVAR -->
-                                    @if($linha->status_categoria === 'ATIVO')
-                                    <form action="{{ route('admin.categoria.desativar', $linha->id_categoria) }}" method="post">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-danger">
-                                            <i class="bi bi-trash3"></i>
-                                        </button>
-                                    </form>
-                                    @else
-                                    <form action="{{ route('admin.categoria.ativar', $linha->id_categoria) }}" method="post">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-success">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-                                    </form>
-                                    @endif
-
-
-
-                                </td>
-                            </tr>
-
-                            @include('admin.categoria.modal.editar', ['categoria' => $linha])
-                            @empty
-                            <tr>
-                                <td>Nenhuma categoria cadastrada</td>
-                            </tr>
-                            @endforelse
-
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /.card-body -->
-            </div>
-
-
+        <div class="login-logo">
+            <a href=""><b>TheGusta</b> Dashboard</a>
         </div>
+
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Acesso ao painel Administrativo - TheGUSTA!</p>
+                @if(session('error'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ session('error') }}
+                    </div>
+                @endif
+
+                @if($errors->any())
+                    <div class="alert alert-warning" role="alert">
+                        Vefique os dados (Email / Senha)
+                    </div>
+                @endif
+
+                <form action="{{ route('admin.login.autenticar') }}" method="post">
+                    @csrf
+
+                    <div class="input-group mb-3">
+                        <input type="email" name="email_usuario" class="form-control" placeholder="Email" />
+                        <div class="input-group-text">
+                            <span class="bi bi-envelope"></span>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" name="senha_usuario" class="form-control" placeholder="Password" />
+                        <div class="input-group-text">
+                            <span class="bi bi-lock-fill"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+
     </div>
-</div>
+
+    @include('admin.partials.script')
 
 
-@include('admin.categoria.modal.criar')
+</body>
 
-
-@endsection
+</html>

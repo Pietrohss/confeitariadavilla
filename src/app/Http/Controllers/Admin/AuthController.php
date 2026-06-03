@@ -3,42 +3,52 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Htto\Request;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class AuthController extends Controller
 {
-
-    public function login(){
+    public function login()
+    {
 
         return view('admin.auth.login');
     }
 
-    public function autenticar(Request $request){
+    public function autenticar(Request $request)
+    {
 
-        $request->validade([
-            'email_usuario'           => 'required|email',
-            'senha_usuario'           => 'required',
+        $request->validate([
+            'email_usuario' => 'required|email',
+            'senha_usuario' => 'required',
         ]);
 
-        // Credencias nescessarias para o USER/FUNCIONARIO logar na aplicação:
+        // Credenciais nescessarias para o USER/FUNCIONARIO logar na aplicação:
         $user = [
-            'email_usuarion' => $request->email_usuario,
-            'senha_usuario'  => $request->senha_usuario,
-            'status_usuario' => 'ATIVO'
+            'email_usuario'     => $request->email_usuario,
+            'password'          => $request->senha_usuario,
+            'status_usuario'    => 'Ativo'
         ];
 
-        if(Auth::guard('admin')->attempt($user, $request->filled('remember'))){
+        //dd($user);
+
+        if (Auth::guard('admin')->attempt($user,  $request->filled('remember'))) {
             $request->session()->regenerate();
 
-            return redirect()-route('admin.dash');
-        };
+            return redirect()->route('admin.dash');
+        }
 
-        return back()->withInput()->with('erro', 'E-mail ou senha invalida');
 
+
+        return back()->withInput()->with('error', 'E-mail ou senha invalido');
     }
 
-    public function logout(){
+    public function logout(Request $request) {
+        Auth::guard('admin')->logout();
 
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('admin.login');
     }
-
 }

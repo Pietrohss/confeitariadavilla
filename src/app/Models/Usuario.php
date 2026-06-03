@@ -3,17 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Override;
 
-class Usuario extends Authenticatable{
+
+class Usuario extends Authenticatable
+{
     protected $table = 'tbl_usuarios';
-
     protected $primaryKey = 'id_usuario';
-
-    public $timestamps =true;
+    public $timestamps = true;
 
     const CREATED_AT = 'criado_em_usuario';
-
     const UPDATED_AT = 'atualizado_em_usuario';
 
     protected $fillable = [
@@ -29,6 +27,8 @@ class Usuario extends Authenticatable{
 
     public function getAuthPassword()
     {
-        return parent::getAuthPassword();
+        return $this->senha_usuario;
     }
+
+    
 }
