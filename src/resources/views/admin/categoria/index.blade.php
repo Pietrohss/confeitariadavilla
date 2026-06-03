@@ -72,7 +72,6 @@
 
 
 
-                                    <!-- DESATIVAR -->
                                     <!-- DESATIVAR ou ATIVAR -->
                                     @if($linha->status_categoria === 'ATIVO')
                                     <form action="{{ route('admin.categoria.desativar', $linha->id_categoria) }}" method="post">
@@ -86,7 +85,6 @@
                                     <form action="{{ route('admin.categoria.ativar', $linha->id_categoria) }}" method="post">
                                         @csrf
                                         @method('PATCH')
-                                        <button type="submit" class="btn btn-danger">
                                         <button type="submit" class="btn btn-success">
                                             <i class="bi bi-pencil"></i>
                                         </button>
@@ -119,3 +117,5 @@
 
 @include('admin.categoria.modal.criar')
 
+
+@endsection
