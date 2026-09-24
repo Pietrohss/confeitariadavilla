@@ -39,4 +39,9 @@ class HomeController extends Controller
 
         return view('site.home.home', compact('filtroCategoria', 'listaProduto', 'banner'));
     }
+
+    public function linkProduto($slug)
+    {
+        return redirect()->route('cardapio.produto', $slug);
+    }
 }

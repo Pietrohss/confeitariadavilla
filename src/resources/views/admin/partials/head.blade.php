@@ -24,7 +24,6 @@
 <meta name="supported-color-schemes" content="light dark" />
 
 
-<link href="path/to/lightbox.css" rel="stylesheet" />
 <link rel="preload" href="{{ asset('dash/css/adminlte.css') }}" as="style" />
 <link href="{{ asset('xyzcode/css/estilo-dash.css') }}" rel="stylesheet">
 <!--end::Accessibility Features-->
@@ -69,3 +68,4 @@
     href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css"
     integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4="
     crossorigin="anonymous" />
+<!--end::Extra Plugins-->

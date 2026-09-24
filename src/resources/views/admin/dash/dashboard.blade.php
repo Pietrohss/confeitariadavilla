@@ -169,7 +169,6 @@
         cardHeader.style.cursor = 'move';
     });
 </script>
-
 0
 <!-- apexcharts -->
 <script
@@ -235,3 +234,5 @@
     );
     sales_chart.render();
 </script>
+
+@endpush

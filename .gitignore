@@ -35,5 +35,7 @@ src/bootstrap/cache/*
 _ide_helper.php
 Homestead.json
 Homestead.yaml
-/backup/
-/backup/
+*:Zone.Identifier
+
+# Backups locais do banco
+backup/*.sql

@@ -18,7 +18,6 @@
 <script src="{{ asset('davilla/js/mixitup.js') }}"></script>
 @endpush
 
-@endpush
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

@@ -25,10 +25,15 @@ class Usuario extends Authenticatable
 
     protected $hidden = ['senha_usuario'];
 
+    public function getAuthPasswordName()
+    {
+        return 'senha_usuario';
+    }
+
     public function getAuthPassword()
     {
         return $this->senha_usuario;
     }
 
-    
+    protected $rememberTokenName = false;
 }

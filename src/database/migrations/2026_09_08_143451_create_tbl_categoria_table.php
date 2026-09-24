@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('nome_categoria', 30);
             $table->text('descricao_categoria');
             $table->string('status_categoria', 10)->default('ATIVO');
-            $table->integer('ordem_categoria')->default(0);
             $table->dateTime('criado_em_categoria')->useCurrent();
             $table->dateTime('atualizado_em_categoria')->useCurrentOnUpdate()->useCurrent();
         });

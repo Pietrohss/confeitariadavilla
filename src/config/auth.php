@@ -42,13 +42,13 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-           //Login Funcionário
-          'admin' => [
+         // Login Funcionário
+        'admin' => [
             'driver' => 'session',
             'provider' => 'usuarios',
         ],
-           //Login Cliente
-          'cliente' => [
+        // Login Cliente
+        'cliente' => [
             'driver' => 'session',
             'provider' => 'cliente',
         ],
@@ -80,6 +80,8 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Usuario::class,
         ],
+
+
 
         // 'users' => [
         //     'driver' => 'database',

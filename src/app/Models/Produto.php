@@ -25,9 +25,8 @@ class Produto extends Model
         'foto_produto',
         'status_produto',
         'destaque_produto',
-        'ordem_produto',
     ];
-
+    
 
     // Relacionamento um produto pertence a uma categoria 
     // belongsTo: pertence a

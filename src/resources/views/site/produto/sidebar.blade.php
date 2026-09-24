@@ -1,4 +1,4 @@
-     <!--Sidebar Page Container-->
+    <!--Sidebar Page Container-->
     <div class="sidebar-page-container">
         <div class="auto-container">
             <div class="row clearfix">
@@ -39,7 +39,6 @@
                                             <div class="item-quantity">Quantidade <input class="qty" type="number" value="1" name="quantity"></div>
                                             <button type="button" class="theme-btn add-to-cart"><span class="btn-title">Add ao reserva</span></button>
                                             <ul class="product-meta">
-                                                <li class="posted_in">Categoria: <a href="#">{{ $produto->CategoriaProduto->nome_categoria }}</a></li>
                                                 <li class="posted_in">Categoria: <a href="{{ $produto->CategoriaProduto->id_categoria }}">{{ $produto->CategoriaProduto->nome_categoria }}</a></li>
                                             </ul>
                                         </div>
@@ -243,7 +242,6 @@
                                 <h3 class="widget-title">Categorias</h3>
                                 <ul class="tag-list clearfix">
                                     @foreach($listaCategoria as $linha)
-                                    <li><a href="#">{{ $linha->nome_categoria }}</a></li>
                                     <li><a href="{{ $linha->id_categoria }}">{{ $linha->nome_categoria }}</a></li>
                                     @endforeach
 
@@ -255,3 +253,4 @@
             </div>
         </div>
     </div>
+    <!--End Sidebar Page Container-->

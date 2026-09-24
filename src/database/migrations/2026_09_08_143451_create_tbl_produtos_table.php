@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('foto_produto', 60);
             $table->string('status_produto', 10)->default('ATIVO');
             $table->string('destaque_produto', 3)->default('NAO');
-            $table->integer('ordem_produto')->default(0);
             $table->dateTime('criado_em_produto')->useCurrent();
             $table->dateTime('atualizado_em_produto')->useCurrentOnUpdate()->useCurrent();
         });
