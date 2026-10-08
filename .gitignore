@@ -18,6 +18,7 @@ src/.vscode
 src/.zed
 src/auth.json
 
+/node_modules
 src/node_modules
 src/vendor
 
